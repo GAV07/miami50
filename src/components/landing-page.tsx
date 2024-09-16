@@ -34,7 +34,7 @@ export function LandingPage() {
   return (
     <div className="relative flex flex-col min-h-screen  text-white">
       <canvas className="fixed t-0 l-0 w-[100%] h-[100%] z-[-10]" ref={canvasRef}></canvas>
-      <header className="px-4 lg:px-6 h-20 flex items-center">
+      <header className="absolute flex justify-between items-center w-full px-4 lg:px-6 h-20">
         <h1 className="text-2xl font-bold">Miami50</h1>
         <nav className="ml-auto flex gap-6 items-center">
           <a className="text-sm font-medium text-gray-300 hover:text-white transition-colors" href="#about">
@@ -56,14 +56,14 @@ export function LandingPage() {
         </nav>
       </header>
       <main className="flex-1">
-        <section className="w-full h-[100vh] py-20 md:py-32 lg:py-40">
+        <section className="w-full h-[100vh] flex flex-col items-center justify-center">
           <div className="px-4 md:px-6">
-            <div className="flex flex-col items-center space-y-4 text-center">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-9xl">
                 Miami50
               </h1>
               <p className="mx-auto max-w-[800px] text-lg text-gray-400 md:text-md">
-                The Dealmaking Event for Investors and Founders Raising Seed Capital
+                The Dealmaking Event for Investors and Founders Raising Capital
               </p>
               <Button className="mt-8 bg-white text-black hover:bg-gray-200 text-lg px-8 py-3 rounded-full transition-colors">
                 Apply Now
@@ -73,7 +73,7 @@ export function LandingPage() {
           </div>
         </section>
         <section id="about" className="w-full py-20">
-          <div className="container px-4 md:px-6">
+          <div className="flex flex-col items-center text-center px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">What is Miami50?</h2>
             <p className="max-w-[900px] text-gray-400 text-lg leading-relaxed">
               Miami50 (M50) is a premier startup event centered around one thing - founder-investor engagement. No panels or speeches, just curated
@@ -85,17 +85,17 @@ export function LandingPage() {
           </div>
         </section>
         <section id="audience" className="w-full py-20">
-          <div className="container px-4 md:px-6">
+          <div className="flex flex-col items-center text-center px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12">Audience</h2>
             <div className="grid gap-8 md:grid-cols-3">
               <div className="space-y-4">
-                <h3 className="text-xl font-semibold">50+ Pre-Seed Founders</h3>
+                <h3 className="text-xl font-semibold">Founders</h3>
                 <p className="text-gray-400">
                   Pre-selected founders from across the state looking to kick-off or close their funding round
                 </p>
               </div>
               <div className="space-y-4">
-                <h3 className="text-xl font-semibold">10+ Investor Groups</h3>
+                <h3 className="text-xl font-semibold">Investor Groups</h3>
                 <p className="text-gray-400">
                   Investor groups or unofficial groups of angels, of no more than 5 individuals each, established to look at deals together without
                   having a pre-established syndicates
@@ -111,7 +111,7 @@ export function LandingPage() {
           </div>
         </section>
         <section id="criteria" className="w-full py-20">
-          <div className="container px-4 md:px-6">
+          <div className="flex flex-col items-center px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12">Criteria</h2>
             <div className="grid gap-12 md:grid-cols-2">
               <div>
@@ -152,43 +152,39 @@ export function LandingPage() {
           </div>
         </section>
         <section id="timeline" className="w-full py-20">
-          <div className="container px-4 md:px-6">
+          <div className="flex flex-col items-center px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12">Timeline</h2>
-            <div className="space-y-8">
+            <div className="flex space-x-8">
               <div className="flex items-center space-x-4">
-                <Calendar className="h-8 w-8 text-white" />
-                <div>
-                  <h3 className="text-xl font-semibold">Sept. 16</h3>
-                  <p className="text-gray-400">Applications Open</p>
+                <div className="outline rounded-full w-48 h-48 flex flex-col justify-center text-center">
+                  <h1 className="text-xl text-gray-400">Applications Open</h1>
+                  <h3 className="text-md font-semibold">Sept. 16</h3>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
-                <Calendar className="h-8 w-8 text-white" />
-                <div>
-                  <h3 className="text-xl font-semibold">Oct. 16</h3>
-                  <p className="text-gray-400">Selections Begin</p>
+                <div className="outline rounded-full w-48 h-48 flex flex-col justify-center text-center">
+                  <h1 className="text-xl text-gray-400">Selections Begin</h1>
+                  <h3 className="text-md font-semibold">Oct. 16</h3>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
-                <Calendar className="h-8 w-8 text-white" />
-                <div>
-                  <h3 className="text-xl font-semibold">Nov. 2nd</h3>
-                  <p className="text-gray-400">Final Selections Made</p>
+                <div className="outline rounded-full w-48 h-48 flex flex-col justify-center text-center">
+                  <h1 className="text-xl text-gray-400">Final Selections</h1>
+                  <h3 className="text-md font-semibold">Nov. 2nd</h3>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
-                <Calendar className="h-8 w-8 text-white" />
-                <div>
-                  <h3 className="text-xl font-semibold">Dec. 2nd</h3>
-                  <p className="text-gray-400">Event Day</p>
+                <div className="outline rounded-full w-48 h-48 flex flex-col justify-center text-center">
+                  <h1 className="text-xl text-gray-400">Event Day</h1>
+                  <h3 className="text-md font-semibold">Dec. 2nd</h3>
                 </div>
               </div>
             </div>
           </div>
         </section>
         <section id="overview" className="w-full py-20">
-          <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12">Event Overview</h2>
+          <div className="flex flex-col items-center px-4 md:px-6">
+            <h2 className="text-3xl w-full text-center font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12">Event Overview</h2>
             <div className="grid gap-12 lg:grid-cols-2 items-center">
               <div>
                 <h3 className="text-2xl font-bold mb-6">Event Details</h3>
@@ -224,7 +220,7 @@ export function LandingPage() {
           </div>
         </section>
         <section id="apply" className="w-full py-20">
-          <div className="container px-4 md:px-6">
+          <div className="px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Ready to Join Miami50?</h2>
               <p className="mx-auto max-w-[700px] text-gray-400 text-xl">
