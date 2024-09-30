@@ -1,13 +1,6 @@
-import { cn } from "@/lib/utils";
 import Image, { StaticImageData }  from "next/image";
 import React from "react";
 import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
-import {
-  IconClipboardCopy,
-  IconFileBroken,
-  IconSignature,
-  IconTableColumn,
-} from "@tabler/icons-react";
 import image1 from "/public/images/brickell.jpg"
 import image2 from "/public/images/brickell2.jpg"
 import image3 from "/public/images/miami.jpg"
